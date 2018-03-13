@@ -22,6 +22,17 @@ NIPLOT <- function(mean,
                    delta = 1, limit = 3,
                    filename = "niplot.png",
                    direction = "positive"){
+  pkgTest <- function(x)
+  {
+    if (!require(x,character.only = TRUE))
+    {
+      install.packages(x,dep=TRUE)
+      if(!require(x,character.only = TRUE)) stop("Package not found")
+    }
+  }
+
+
+  pkgTest("ggplot2")
   limit <- delta*3
   bound <- ubound
   if(abs(lbound) > ubound) bound <- abs(lbound)
