@@ -13,7 +13,7 @@
 #' @examples
 #' NIPLOT()
 
-
+require(ggplot2)
 NIPLOT <- function(mean,
                    lbound,
                    ubound,
