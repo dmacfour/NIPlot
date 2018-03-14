@@ -13,7 +13,7 @@
 #' @examples
 #' NIPLOT()
 
-require(ggplot2)
+
 NIPLOT <- function(mean,
                    lbound,
                    ubound,
@@ -22,6 +22,8 @@ NIPLOT <- function(mean,
                    delta = 1, limit = 3,
                    filename = "niplot.png",
                    direction = "positive"){
+
+  require(ggplot2)
 
   limit <- delta*3
   bound <- ubound
