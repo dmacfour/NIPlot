@@ -25,7 +25,7 @@ NIPLOT <- function(mean,
                    filename = NULL,
                    guides = TRUE,
                    guides_direction = "positive",
-                   text_size = 30){
+                   text_size = 20){
 
   limit <- delta*3
   bound <- ubound
