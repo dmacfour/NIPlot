@@ -10,6 +10,7 @@
 #' @param filename optional filename - saves to current directory
 #' @keywords non-inferiority
 #' @export
+#' @import ggplot2
 #' @examples
 #' NIPLOT()
 
@@ -22,8 +23,6 @@ NIPLOT <- function(mean,
                    delta = 1, limit = 3,
                    filename = "niplot.png",
                    direction = "positive"){
-
-  require(ggplot2)
 
   limit <- delta*3
   bound <- ubound
